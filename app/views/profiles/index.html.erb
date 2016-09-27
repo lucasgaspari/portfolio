@@ -36,7 +36,7 @@
     <% @profile.jobs.each do |job| %>
     <div class="column">
     <ul>
-      <li><%= image_tag job.img_job.url(:thumb) %></li>
+      <%= image_tag job.img_job.url(:thumb) %>
       <li><%= job.title %></li>
     </ul>
   </div>
