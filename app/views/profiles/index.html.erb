@@ -18,26 +18,31 @@
   <h2>Skills</h2>
   <% @profile.skills.each do |skill| %>
   <p>
+
+  </p>
   <div class="item">
     <i class="book icon"></i>
     <div class="content">
         <%= skill.name %> - <%= skill.years %> anos de experiência
     </div>
   </div>
-  </p>
   <% end %>
 </div>
-
+<hr />
 <p>
   <h2>Jobs</h2>
   <p>
     <div class="ui three column grid">
     <% @profile.jobs.each do |job| %>
     <div class="column">
-    <ul>
-      <%= image_tag job.img_job.url(:thumb) %>
-      <li><%= job.title %></li>
-    </ul>
+      <div class="item">
+         <div class="ui tiny image">
+           <%= image_tag job.img_job.url(:thumb) %>
+         </div>
+         <div class="middle aligned content">
+           <%= job.title %>
+         </div>
+      </div>
   </div>
   <% end %>
   </p>
