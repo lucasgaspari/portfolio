@@ -2,6 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "semantic-ui";
+.cabecalho{
+  text-align: center;
+}
+.avatar{
+  width:200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 100%;
+  overflow: hidden;
+  & img{
+    width: 100%;
+  }
+}
 /*body{
   color:black;
 }
@@ -20,16 +33,7 @@ li{
   max-width: 600px;
   margin: auto;
 }
-.avatar{
-  width:120px;
-  height: 120px;
-  margin: auto;
-  border-radius: 100%;
-  overflow: hidden;
-  & img{
-    width: 100%;
-  }
-}
+
 
 hr{
   border-style: dashed;
