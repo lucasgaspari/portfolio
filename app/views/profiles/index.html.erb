@@ -26,12 +26,14 @@
         <%= skill.name %> - <%= skill.years %> anos de experiência
     </div>
   </div>
+  <%= link_to "New Skill", controller: "skills", action: "new", id: @profile %>
   <% end %>
 </div>
 <hr />
 <p>
   <h2>Jobs</h2>
   <p>
+    <%= link_to "New Job", controller: "jobs", action: "new", id: @profile %>
     <div class="ui three column grid">
     <% @profile.jobs.each do |job| %>
       <div class="column">
