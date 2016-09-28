@@ -34,16 +34,16 @@
   <p>
     <div class="ui three column grid">
     <% @profile.jobs.each do |job| %>
-    <div class="column">
-      <div class="item">
-         <div class="ui tiny image">
-           <%= image_tag job.img_job.url(:thumb) %>
-         </div>
-         <div class="middle aligned content">
-           <%= job.title %>
-         </div>
+      <div class="column">
+        <div class="item">
+           <div class="ui tiny image">
+             <%= image_tag job.img_job.url(:thumb) %>
+           </div>
+           <div class="middle aligned content">
+             <%= job.title %>
+           </div>
+        </div>
       </div>
-  </div>
   <% end %>
   </p>
   <!-- <%= link_to "New Job", controller: "jobs", action: "new", id: @profile %> -->
