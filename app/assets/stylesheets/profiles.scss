@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "semantic-ui";
+.bio{
+
+}
 .cabecalho{
   text-align: center;
 }
@@ -14,6 +17,40 @@
   & img{
     width: 100%;
   }
+}
+.jobs h2{
+  padding:10px;
+}
+.jobs img{
+  width:50px;
+  height:50px;
+  margin-right:10px;
+  float:left;
+}
+.skills h2{
+  padding:10px;
+}
+.skills img{
+  width:50px;
+  height:50px;
+  float:left;
+}
+.all_jobs{
+  margin: 30px auto;
+}
+.job{
+  width:160px;
+  height:120px;
+  padding:10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: #E8E8E8;
+  border-radius:25%;
+}
+.job{
+  font-size:10pt;
+  color: grey;
+  box-shadow: 2px 5px 5px #ccc;
 }
 /*body{
   color:black;

@@ -7,15 +7,20 @@
   <p class="nome">
     Olá, meu nome é <b><%=@profile.name %></b> e sou freelancer em Ruby on Rails.
   </p>
-<div class="quadros">
+<div class="bio">
   <p>
-    <h3>Biografia</h3>
-    <p><%= @profile.bio %></p>
+    <p>
+    <h3>Biografia</h3>    
+    <%= @profile.bio %>
+  </p>
   </p>
 </div><hr />
 </div>
 <div class="ui list">
-  <h2>Skills</h2>
+  <div class="skills">
+    <img src="http://image.flaticon.com/icons/svg/65/65629.svg" alt="Skills"/>
+    <h2>Skills</h2>
+  </div>
   <% @profile.skills.each do |skill| %>
   <p>
 
@@ -23,31 +28,41 @@
   <div class="item">
     <i class="book icon"></i>
     <div class="content">
-        <%= skill.name %> - <%= skill.years %> anos de experiência
+        <li class="itemSkill">
+          <%= skill.name %> - <%= skill.years %> anos de experiência
+        </li>
     </div>
   </div>
-  <%= link_to "New Skill", controller: "skills", action: "new", id: @profile %>
   <% end %>
+  <br />
+  <%= button_to "New Skill", controller: "skills", :action => "new", id: @profile  %>
+
 </div>
 <hr />
 <p>
-  <h2>Jobs</h2>
-  <p>
-    <%= link_to "New Job", controller: "jobs", action: "new", id: @profile %>
+  <div class="jobs">
+    <img src="https://www.myamcat.com/blog/wp-content/uploads/2016/02/job-icon.png" alt="Skills"/>
+    <h2>Jobs</h2>
+  </div>
+  <div class="all_jobs">
+
     <div class="ui three column grid">
     <% @profile.jobs.each do |job| %>
       <div class="column">
         <div class="item">
+          <div class="job">
+
            <div class="ui tiny image">
              <%= image_tag job.img_job.url(:thumb) %>
            </div>
            <div class="middle aligned content">
              <%= job.title %>
            </div>
+         </div>
         </div>
       </div>
   <% end %>
   </p>
   <!-- <%= link_to "New Job", controller: "jobs", action: "new", id: @profile %> -->
 </div>
-</p>
+</div>
